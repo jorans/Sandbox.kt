@@ -9,10 +9,11 @@ class Termin(val kod5: String): Comparable<Termin> {
     }
 
     val kod3: String
-        get(){
-        val prefix = if(kod5.endsWith('1')) "V" else "H"
-        return prefix + kod5.substring(2, 4)
-    }
+        get() {
+            val prefix = if (kod5.endsWith('1')) "V" else "H"
+            return prefix + kod5.substring(2, 4)
+        }
+
     override fun compareTo(other: Termin) = kod5.compareTo(other.kod5)
 
 }
